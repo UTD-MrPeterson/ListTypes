@@ -7,6 +7,7 @@
 
 template<typename T>
 class ListWrapper {
+public:
     virtual void addToFront(const T& value) = 0;
     virtual void addToBack(const T& value) = 0;
     virtual void printAll() = 0;
