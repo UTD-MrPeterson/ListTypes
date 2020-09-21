@@ -7,19 +7,20 @@
 
 #include <iostream>
 #include <list>
+#include "ListWrapper.h"
 
 template<typename T>
-class LinkedListWrapper {
+class LinkedListWrapper : public ListWrapper<T> {
 public:
-    void addToFront(T value) {
+    void addToFront(const T& value) override {
         theList.insert(theList.begin(), value);
     }
 
-    void addToBack(T value) {
+    void addToBack(const T& value) override {
         theList.push_back(value);
     }
 
-    void printAll() {
+    void printAll() override {
         for ( T value : theList) {
             std::cout << value << std::endl;
         }

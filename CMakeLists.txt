@@ -3,4 +3,4 @@ project(ListTypes)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ListTypes main.cpp VectorWrapper.h LinkedListWrapper.h)
+add_executable(ListTypes main.cpp VectorWrapper.h LinkedListWrapper.h ListWrapper.h)

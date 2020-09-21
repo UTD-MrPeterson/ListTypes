@@ -7,19 +7,20 @@
 
 #include <iostream>
 #include <vector>
+#include "ListWrapper.h"
 
 template<typename T>
-class VectorWrapper {
+class VectorWrapper : public ListWrapper<T> {
 public:
-    void addToFront(const T& value) {
+    void addToFront(const T& value) override {
         theVector.insert(theVector.begin(), value);
     }
 
-    void addToBack(const T& value) {
+    void addToBack(const T& value) override {
         theVector.push_back(value);
     }
 
-    void printAll() {
+    void printAll() override {
         for ( T value : theVector) {
             std::cout << value << std::endl;
         }
@@ -27,7 +28,6 @@ public:
 
 private:
     std::vector<T> theVector;
-
 };
 
 
